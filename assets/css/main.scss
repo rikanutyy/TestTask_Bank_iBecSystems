@@ -1,0 +1,132 @@
+/* Общие стили // Настройка // Адаптивность (by CodeWoken) */
+/* Сделан строго по дизайну из ТЗ */
+
+/* Переменные */
+$font-stack: Arial, Helvetica, sans-serif;
+/* Цвета */
+$background-color: #dedede;
+$navbar-color: linear-gradient(#ececec, #dadada);
+$header-color: #dcdbdc;
+$dropdown-menu-color: #f2f2f2;
+$card-bc: #ebebeb;
+
+$user-hint-color: #7a7a7a;
+$ad-btn-bc: #da0000;
+$ad-btn-fc: #fff;
+$text-color: #4c4c4c;
+$heading-text-color: #e3000f;
+$avatar-color: #e20e12;
+
+$hover-background: #fff;
+$hover-color: #e3000f;
+$hover-text-color: #fff;
+$active-color: $hover-color;
+/* Тени и бордеры */
+$navbar-border: 1px solid #bababa;
+$user-border: 1px solid #f2f2f2;
+$card-border: 1px solid #fff;
+$card-title-border: 1px solid $heading-text-color;
+$header-shadow: 0 0 10px 5px rgba($color: #000000, $alpha: 0.1);
+/* Размер шрифтов */
+$profile-font-size: 24px;
+$link-font-size: 13px;
+$dropdown-link-fs: 12px;
+$user-font-size: 24px;
+$card-title-fc: 20px;
+$ad-title-fc: 13px;
+/* Отступы, Ширина и высота */
+$header-height: 70px;
+$default-indent: 25px; /* отступ */
+$padding-user: 10px 20px;
+$height-card: 370px;
+$height-ad: 170px;
+
+/* Cпецификация */
+html {
+  min-width: 250px;
+}
+body {
+  font-family: $font-stack;
+  background-color: $background-color;
+  color: $text-color;
+}
+ul, li {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+a, a:hover {
+	text-decoration: none;
+}
+/* пустая шапка */
+header {
+  background: $header-color;
+  height: $header-height;
+  box-shadow: $header-shadow;
+}
+/* media-запросы (адаптив) */
+@media (max-width: 991.98px) {
+  /* 1 navbar START */
+  header {
+      display: none;
+  }
+  .user_block {
+    .profile__name {
+        font-size: ($profile-font-size/1.3);
+        position: relative;
+        width: 100%;
+        h2 {
+          left: 25px;
+        }
+      }
+    .profile__avatar {
+      min-width: 100px;
+      min-height: auto;
+      background-color: $avatar-color;
+    }
+  }
+  .nav_block {
+    .menu {
+      margin-top: $default-indent;
+      flex-direction: column;
+      margin-left: 0;
+    }
+    .menu__item {
+      padding: 9px 18px;
+      text-align: center;
+      /* border-границы */
+      &:nth-child(1n) {border-bottom: $navbar-border}
+      &:last-child {border-bottom: 0;}
+    }
+    .dropdown-menu.show {
+      display: none;
+      /* в идеале могло раскрываться как гамбургер меню */
+      /* в моб версии переходило бы на линк */
+    }
+  }/* 1 navbar END */
+  
+  /* 2 content START */
+  .right-section {
+    order: 1;
+  }
+  .left-section {
+    order: 12;
+  }
+  .card {
+    text-align: center;
+  }/* 2 content END */
+/* 3 users START */
+.Users {
+  text-align: center;
+  .user__hint  {
+    margin-left: 0;
+  }
+  .user__list {
+    margin: ($default-indent/2) auto;
+  }
+  .user__link {
+    justify-content: center;
+  }
+}
+/* 3 users END */
+}

@@ -1,0 +1,30 @@
+{
+  "name": "Bank_CW",
+  "version": "1.0.0",
+  "description": "Test Task (CodeWoken)",
+  "author": "Vladislav Dianov",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.8.0",
+    "bootstrap": "^4.3.1",
+    "jquery": "^3.4.1",
+    "nuxt": "^2.0.0",
+    "popper.js": "^1.16.0",
+    "vue-yandex-maps": "^0.9.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/style-resources": "^1.0.0",
+    "coffee-loader": "^0.9.0",
+    "coffeescript": "^2.4.1",
+    "node-sass": "^4.13.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "sass-loader": "^8.0.0"
+  }
+}
