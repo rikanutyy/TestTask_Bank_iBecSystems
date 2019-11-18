@@ -1,17 +1,19 @@
 # Bank_CW
 
-> Test Task (CodeWoken)
+> Test Task (CodeWoken) - тестовое задание
 
 ## Build Setup
 
 ``` bash
-# install dependencies
-$ npm run install
+# create directory (заходим в каталог)
+$ cd D:/../TestTask_Bank_iBecSystems
+# install packages (устанавливаем пакеты)
+$ npm install
 
-# serve with hot reload at localhost:3000
+# serve with hot reload at localhost:3000 (стартуем наш проект)
 $ npm run dev
 
-# build for production and launch server
+# build for production and launch server (прочее)
 $ npm run build
 $ npm run start
 
